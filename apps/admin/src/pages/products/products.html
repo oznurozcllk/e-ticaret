@@ -1,0 +1,43 @@
+<app-blank pageTitle="Ürünler" [breadcrumbs]="[{title:'Ürünler', url:'/products ', icon:'box'}]"></app-blank>
+<p-table [value]="data()" [tableStyle]="{ 'min-width': '50rem' }">
+    <ng-template pTemplate="header">
+        <tr>
+            <th>Ürün Adı</th>
+            <th>Ürün Resmi</th>
+            <th>Fiyat</th>
+            <th>Stok</th>
+            <th style="width: 120px; text-align: center;">İşlemler</th>
+        </tr>
+    </ng-template>
+
+    <ng-template pTemplate="body" let-product>
+        <tr>
+            <td>{{ product.name }}</td>
+            <td>
+                <img [src]="product.imageUrl" [alt]="product.name" height="70" style="border-radius: 5px;">
+            </td>
+            <td>{{ product.price | currency:'TRY':'symbol-narrow':'1.2-2' }}</td>
+            <td>{{ product.stock }}</td>
+            
+            <td style="text-align: center;">
+                <div style="display: flex; gap: 10px; justify-content: center;">
+                    <p-button 
+                        icon="pi pi-pencil" 
+                        severity="success" 
+                        [outlined]="true" 
+                        pTooltip="Güncelle" 
+                        tooltipPosition="top">
+                    </p-button>
+
+                    <p-button 
+                        icon="pi pi-trash" 
+                        severity="danger" 
+                        [outlined]="true" 
+                        pTooltip="Sil" 
+                        tooltipPosition="top">
+                    </p-button>
+                </div>
+            </td>
+        </tr>
+    </ng-template>
+</p-table>

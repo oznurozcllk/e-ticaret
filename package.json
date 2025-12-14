@@ -6,6 +6,7 @@
   "private": true,
   "dependencies": {
     "@angular-devkit/build-angular": "20.3.6",
+    "@angular/animations": "^21.0.5",
     "@angular/common": "20.3.6",
     "@angular/compiler": "20.3.6",
     "@angular/core": "20.3.6",
@@ -15,6 +16,8 @@
     "@angular/router": "20.3.6",
     "@angular/ssr": "20.3.6",
     "express": "^4.21.2",
+    "primeicons": "^7.0.0",
+    "primeng": "^17.18.11",
     "rxjs": "~7.8.0"
   },
   "devDependencies": {
