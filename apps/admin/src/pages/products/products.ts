@@ -5,6 +5,9 @@ import { ButtonModule } from 'primeng/button';
 import { TooltipModule } from 'primeng/tooltip';
 import { CommonModule } from '@angular/common';
 import { httpResource } from '@angular/common/http';
+import { RouterLink } from '@angular/router';
+
+
 
 export interface ProductModel {
 id:string;
@@ -21,7 +24,10 @@ categoryName: string;
   TableModule,
   CommonModule,
   ButtonModule,
-  TooltipModule
+  TooltipModule,
+  RouterLink
+
+  
   ],
   templateUrl: './products.html',
   encapsulation: ViewEncapsulation.None,

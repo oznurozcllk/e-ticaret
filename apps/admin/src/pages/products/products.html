@@ -1,4 +1,16 @@
 <app-blank pageTitle="Ürünler" [breadcrumbs]="[{title:'Ürünler', url:'/products ', icon:'box'}]"></app-blank>
+
+<div style="display: flex; justify-content: flex-end; margin-bottom: 1rem;">
+    <p-button 
+        icon="pi pi-plus" 
+        [rounded]="true" 
+        severity="primary" 
+        [raised]="true"
+        pTooltip="Yeni Ürün Ekle" 
+        tooltipPosition="left"
+        routerLink="create"> </p-button>
+</div>
+
 <p-table [value]="data()" [loading]="loading()" [tableStyle]="{ 'min-width': '50rem' }">
     <ng-template pTemplate="header">
         <tr>
